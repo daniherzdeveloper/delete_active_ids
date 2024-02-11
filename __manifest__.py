@@ -8,7 +8,6 @@ Father
 ================================
 Allows users to configure ...
     """,
-    'category': 'Accounting/Accounting',
     'website': 'https://www.marlonfalcon.com',
     'depends': ['base', 'sale', 'purchase', 'account'],
     'category': 'Extra Tools',
