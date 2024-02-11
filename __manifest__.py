@@ -1,14 +1,12 @@
 {
     'name': 'Delete Active IDS',
     'version' : '17.0',
-    'summary': 'Invoices & Payments',
+    'summary': 'Delete Active IDS',
     'sequence': 10,
     'description': """
-Father
 ================================
-Allows users to configure ...
+Mass deletion of sales order, purchase order and invoices.
     """,
-    'website': 'https://www.marlonfalcon.com',
     'depends': ['base', 'sale', 'purchase', 'account'],
     'category': 'Extra Tools',
     'auto_install': False,

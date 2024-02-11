@@ -1,22 +1,22 @@
 from odoo import models, api
 
-class CustomSaleOrder(models.Model):
+class DeleteSaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    def cancel_active_orders(self):
+    def delete_active_ids(self):
         self.write({'state': 'cancel'})
         self.unlink()
 
-class CustomPurchaseOrder(models.Model):
+class DeletePurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
-    def cancel_active_orders(self):
+    def delete_active_ids(self):
         self.write({'state': 'cancel', 'mail_reminder_confirmed': False})
         self.unlink()
 
-class CustomAccountMove(models.Model):
+class DeleteAccountMove(models.Model):
     _inherit = 'account.move'
 
-    def cancel_active_orders(self):
+    def delete_active_ids(self):
         self.button_draft()
         self.unlink()

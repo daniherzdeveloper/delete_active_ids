@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <odoo> 
-    <record id="model_sale_order_action_quotation_sent" model="ir.actions.server">
-        <field name="name">Eliminar Ordenes de Venta</field>
+    <record id="model_sale_order_action_delete_active_ids" model="ir.actions.server">
+        <field name="name">Delete Sales Orders</field>
         <field name="model_id" ref="sale.model_sale_order"/>
         <field name="binding_model_id" ref="sale.model_sale_order"/>
         <field name="binding_view_types">form,list</field>
         <field name="state">code</field>
-        <field name="code">action = records.cancel_active_orders()</field>
+        <field name="code">action = records.delete_active_ids()</field>
     </record>
 
-    <record id="model_purchase_order_action_quotation_sent" model="ir.actions.server">
-        <field name="name">Eliminar Ordenes de Compra</field>
+    <record id="model_purchase_order_action_delete_active_ids" model="ir.actions.server">
+        <field name="name">Delete Purchase Orders</field>
         <field name="model_id" ref="purchase.model_purchase_order"/>
         <field name="binding_model_id" ref="purchase.model_purchase_order"/>
         <field name="binding_view_types">form,list</field>
         <field name="state">code</field>
-        <field name="code">action = records.cancel_active_orders()</field>
+        <field name="code">action = records.delete_active_ids()</field>
     </record>
 
-    <record id="model_account_action_quotation_sent" model="ir.actions.server">
-        <field name="name">Eliminar Facturas</field>
+    <record id="model_account_move_action_delete_active_ids" model="ir.actions.server">
+        <field name="name">Delete Invoices</field>
         <field name="model_id" ref="account.model_account_move"/>
         <field name="binding_model_id" ref="account.model_account_move"/>
         <field name="binding_view_types">form,list</field>
         <field name="state">code</field>
-        <field name="code">action = records.cancel_active_orders()</field>
+        <field name="code">action = records.delete_active_ids()</field>
     </record>
 </odoo> 
